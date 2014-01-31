@@ -5,12 +5,30 @@ import android.os.Bundle;
 
 //import android.view.Menu;//テーマがブランクの場合必要なし
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity{
+
+  AnimationSurfaceView surfaceView;
+  //Screen screen;
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
+  protected void onCreate(Bundle savedInstanceState){
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
+
+    surfaceView = new AnimationSurfaceView(this/*MainActivity:Activity Context*/);
+    setContentView(surfaceView);
+
+    //screen = new Screen(this);
+    //setContentView(screen);
+
+    /*
+    LinearLayout layout = new LinearLayout(this);
+    layout.setOrientation(LinearLayout.VERTICAL);
+    setContentView(layout);
+    layout.addView(new Screen(this));
+    */
+
+    //
+
   }
 
   /*テーマによる
