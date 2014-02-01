@@ -7,19 +7,20 @@ import android.view.Menu;
 //import android.view.Menu;//テーマがブランクの場合必要なし
 
 public class MainActivity extends Activity{
+  //メンバ
+  MySurfaceView mySurfaceView;
 
-  AnimationSurfaceView surfaceView;
-  //Screen screen;
+  //MyView myView;
 
   @Override
   protected void onCreate(Bundle savedInstanceState){
     super.onCreate(savedInstanceState);
 
-    surfaceView = new AnimationSurfaceView(this/*MainActivity:Activity Context*/);
-    setContentView(surfaceView);
+    mySurfaceView = new MySurfaceView(this/*MainActivity:Activity Context*/);
+    setContentView(mySurfaceView);
 
-    //screen = new Screen(this);
-    //setContentView(screen);
+    //myView = new MyView(this);
+    //setContentView(myView);
 
     /*
     LinearLayout layout = new LinearLayout(this);
@@ -27,17 +28,14 @@ public class MainActivity extends Activity{
     setContentView(layout);
     layout.addView(new Screen(this));
     */
-
-    //
-
   }
 
   //メニューボタンの処理、引数がView、runさせるのはSrufaceViewだが表示できる
   //オーバーライドだけどコレどこで呼ばれてるんだ…イベント？
   @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    // Inflate the menu; this adds items to the action bar if it is present.
+  public boolean onCreateOptionsMenu(Menu menu){
     getMenuInflater().inflate(R.menu.main, menu);
+
     return true;
   }
 

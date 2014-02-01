@@ -7,8 +7,7 @@ import android.graphics.Paint;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-//コピペ
-public class AnimationSurfaceView extends SurfaceView implements Runnable, SurfaceHolder.Callback{
+public class MySurfaceView extends SurfaceView implements Runnable, SurfaceHolder.Callback{
 
   static final long FPS = 20;
   static final long FRAME_TIME = 1000 / FPS;
@@ -18,7 +17,7 @@ public class AnimationSurfaceView extends SurfaceView implements Runnable, Surfa
   int cx = BALL_R, cy = BALL_R;
   int screen_width, screen_height;
 
-  public AnimationSurfaceView(Context context){
+  public MySurfaceView(Context context){
     super(context);
     surfaceHolder = getHolder();
     surfaceHolder.addCallback(this);

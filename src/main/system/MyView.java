@@ -6,8 +6,8 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.View;
 
-public class Screen extends View{
-  public Screen(Context screen_context){
+public class MyView extends View{
+  public MyView(Context screen_context){
     super(screen_context);
   }
 
@@ -22,5 +22,4 @@ public class Screen extends View{
     paint.setAntiAlias(true);
     canvas.drawText("hello world", 50, 300, paint);
   }
-
 }
